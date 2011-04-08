@@ -1,0 +1,14 @@
+<p><%= it_pro %>, <%= it_nom %>, <%= it_tipe %>, <%= it_dose %></p>
+<%= form_for @operation do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :fecha %><br />
+    <%= f.date_select :fecha %>
+  </p>
+	<%= f.hidden_field :item_id, :value => it_id %> 
+  <p>
+    <%= f.label :movement %><br />
+    <%= f.text_field :movement %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

@@ -1,0 +1,9 @@
+<% title "New Operation" %>
+
+<%= render :partial => 'form', :locals => { :it_id => @item.id,
+	                                        :it_pro => @item.produit.nom,
+	                                        :it_tipe => @item.tipe.nom,
+	                                        :it_nom => @item.nom_comercial,             
+	                                    	:it_dose => @item.dose }  %>
+
+<p><%= link_to "Back to List", operations_path %></p>

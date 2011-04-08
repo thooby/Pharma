@@ -1,0 +1,12 @@
+<% title "Famille Med" %>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @famille_med.nom %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_famille_med_path(@famille_med) %> |
+  <%= link_to "Destroy", @famille_med, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", famille_meds_path %>
+</p>

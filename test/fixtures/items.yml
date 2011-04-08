@@ -1,0 +1,13 @@
+one:
+  produit_id: 1
+  nom_comercial: MyString
+  tipe_id: 1
+  dose: MyString
+  quantite: 1
+
+two:
+  produit_id: 1
+  nom_comercial: MyString
+  tipe_id: 1
+  dose: MyString
+  quantite: 1

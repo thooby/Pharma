@@ -1,0 +1,25 @@
+<%= form_for @item do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :produit_id %><br />
+<%=  f.collection_select(:produit_id, Produit.order("nom"),:id,:nom ) %>
+   
+  </p>
+  <p>
+    <%= f.label :nom_comercial %><br />
+    <%= f.text_field :nom_comercial %>
+  </p>
+  <p>
+    <%= f.label :tipe_id %><br />
+  <%= f.collection_select(:tipe_id, Tipe.order("nom"),:id,:nom ) %>
+  </p>
+  <p>
+    <%= f.label :dose %><br />
+    <%= f.text_field :dose %>
+  </p>
+    <% if local_assigns.has_key? :n %>
+    <%= f.hidden_field :quantite, :value => 0 %>
+    <% end %>
+
+  <p><%= f.submit %></p>
+<% end %>

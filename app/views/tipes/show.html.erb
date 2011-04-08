@@ -1,0 +1,12 @@
+<% title "Tipe" %>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @tipe.nom %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_tipe_path(@tipe) %> |
+  <%= link_to "Destroy", @tipe, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", tipes_path %>
+</p>

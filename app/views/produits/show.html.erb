@@ -1,0 +1,16 @@
+<% title "Produit" %>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @produit.nom %>
+</p>
+<p>
+  <strong>Famille Med:</strong>
+  <%= @produit.famille_med.nom %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_produit_path(@produit) %> |
+  <%= link_to "Destroy", @produit, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", produits_path %>
+</p>

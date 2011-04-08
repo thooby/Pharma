@@ -1,0 +1,23 @@
+<% title "Operation" %>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @operation.fecha %>
+</p>
+<p>
+  <strong>Item:</strong>
+  	<%= @operation.item.produit.nom %>
+    <%= @operation.item.nom_comercial %>
+    <%= @operation.item.tipe.nom %>
+    <%= @operation.item.dose %>
+</p>
+<p>
+  <strong>Movement:</strong>
+  <%= @operation.movement %> <strong>Balance:</strong> <%= @operation.item.quantite %>
+</p>
+
+<p>
+	<%= link_to "Montrer item", item_path %> |
+  
+  <%= link_to "Voir operations", operations_path %>
+</p>

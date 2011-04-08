@@ -1,0 +1,29 @@
+<% title "Item" %>
+
+<p>
+  <strong>Produit:</strong>
+  <%= @item.produit.nom %>
+</p>
+<p>
+  <strong>Nom Comercial:</strong>
+  <%= @item.nom_comercial %>
+</p>
+<p>
+  <strong>Tipe:</strong>
+  <%= @item.tipe.nom %>
+</p>
+<p>
+  <strong>Dose:</strong>
+  <%= @item.dose %>
+</p>
+<p>
+  <strong>Quantite:</strong>
+  <%= @item.quantite %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_item_path(@item) %> |
+  <%= link_to "Destroy", @item, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", items_path %> |
+<%= link_to "Modifier quantités", enlaop_url(:id =>  @item.id) %>
+</p>

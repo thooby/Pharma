@@ -1,0 +1,25 @@
+<% title "Operations" %>
+
+<table>
+  <tr>
+    <th>Fecha</th>
+    <th>Produit</th>
+    <th>Nom Comercial</th>
+    <th>Tipe</th>
+    <th>Dose</th>
+    <th>Movement</th>
+  </tr>
+  <% for operation in @operations %>
+    <tr>
+      <td><%= operation.fecha %></td>
+      <td><%= operation.item.produit.nom %></td>
+      <td><%= operation.item.nom_comercial %></td>
+      <td><%= operation.item.tipe.nom %></td>
+      <td><%= operation.item.dose %></td>
+      <td><%= operation.movement %></td>
+      
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "Items", items_path %></p>

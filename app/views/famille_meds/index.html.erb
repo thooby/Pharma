@@ -1,0 +1,17 @@
+<% title "Famille Meds" %>
+
+<table>
+  <tr>
+    <th>Nom</th>
+  </tr>
+  <% for famille_med in @famille_meds %>
+    <tr>
+      <td><%= famille_med.nom %></td>
+      <td><%= link_to "Show", famille_med %></td>
+      <td><%= link_to "Edit", edit_famille_med_path(famille_med) %></td>
+      <td><%= link_to "Destroy", famille_med, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Famille Med", new_famille_med_path %></p>

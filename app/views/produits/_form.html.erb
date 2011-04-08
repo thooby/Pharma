@@ -1,0 +1,12 @@
+<%= form_for @produit do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :nom %><br />
+    <%= f.text_field :nom %>
+  </p>
+  <p>
+    <%= f.label :famille_med_id %><br />
+    <%=  f.collection_select(:famille_med_id, FamilleMed.order("nom"),:id,:nom ) %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

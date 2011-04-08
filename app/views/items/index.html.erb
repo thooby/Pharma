@@ -1,0 +1,25 @@
+<% title "Items" %>
+
+<table>
+  <tr>
+    <th>Produit</th>
+    <th>Nom Comercial</th>
+    <th>Tipe</th>
+    <th>Dose</th>
+    <th>Quantite</th>
+  </tr>
+  <% for item in @items %>
+    <tr>
+      <td><%= item.produit.nom %></td>
+      <td><%= item.nom_comercial %></td>
+      <td><%= item.tipe.nom %></td>
+      <td><%= item.dose %></td>
+      <td><%= item.quantite %></td>
+      <td><%= link_to "Montrer", item %></td>
+      <td><%= link_to "Modifier quantités", enlaop_url(:id =>  item.id) %></td>
+
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Item", new_item_path %></p>
